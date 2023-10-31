@@ -171,3 +171,70 @@ toda accion effect-hook se ejecuta al montar
 Ningun efecto bloquea el render
 todas las acciones y limpieza se realizan en orden 
 */
+
+/**
+ CLASE 6 PROMISES ASINCRONIA Y MAP
+
+PROMISE
+    Es un objeto que permite representar y seguir el ciclo de vida
+    de una tarea/ funcion
+    Estados posibles: PENDING => FULLFILLED / REJECTED 
+  
+ 
+ */
+
+//EJEMPLO
+// Funcion que retorna una promesa con un array de objetos
+function getProductData() {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() =>{
+            const products = [
+                {
+                    id:1,
+                    name: "producto 1",
+                    description: "descripcion del producto 1",
+                    stock: 10
+                },
+                {
+                    id: 2,
+                    name: "producto 2",
+                    description: "descripcion del producto 2",
+                    stock: 12
+                }
+            ];
+            resolve(products);
+        }, 3000); // resuelve la promesa despues de 3 seg
+    });
+}
+
+// llama a la funcion y maneja el resultado
+getProductData()
+    .then (products => {
+        //imprime los productos en la consola
+        products.forEach(product => {
+            console.log(product);
+        });
+    })
+    .catch(error => {
+        console.error("error", error);
+    });
+
+/**
+ MAP
+ El metodo map() nos permite generar un nuevo array
+ tomando como base otro array y utilizando una funcion
+ transformadora
+ */
+const users = [
+    {nombre: "claudio"},
+    {nombre: "gomez"}
+]
+console.log(users);
+console.log(users.map (user => user.nombre));
+console.log(users.map (user => user.nombre).join(","));
+/**
+ En react con el metodo map podremos hacer render de una
+ coleccion de objetos
+ Idealmente debemos incluir en cada elemento la propiedad key
+ que marque la identidad del elemento
+ */
