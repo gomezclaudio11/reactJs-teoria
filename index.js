@@ -238,3 +238,64 @@ console.log(users.map (user => user.nombre).join(","));
  Idealmente debemos incluir en cada elemento la propiedad key
  que marque la identidad del elemento
  */
+
+ /**
+ CLASE  7
+ CONSUMIENDO API´S
+  PARADIGMA DE INTERCAMBIO DE INFORMACION
+  MODELO CLIENTE-SERVIDOR
+  CLIENTE(consumidor)
+  SERVIDOR(provedor)
+  Este modelo establece que los distintos consumidores se
+  identifican entre ellos y acuedarn una manera de transferir
+  la informacion
+
+  Quien inicia la operacion?
+  El CLIENTE la inicia cuando solicita info, el servidor envia
+  la respuesta, fin de la comunicacion
+  
+  Si invertimos la logica, se llama PUSH
+  El SERVIDOR la inicia, el elige el momento del inicio de la 
+  transferencia y la envia a un servicio
+  El servidor se la provee al cliente
+  Surge para generar engagement y lograr que los usuarios
+  interactuen
+
+  REQUESTS VIA HTTPS
+  Para ayudar a realizar una solicitud a un servidor
+  Nos permite establecer un protocolo de transferencia
+  definido por:
+  Direccion/URL
+  verbo(GET, POST, PUT, DELETE)
+  parametros: via query o url)
+  header
+  body (contenido en un post)
+
+QUERY PARAMS
+Nos permite incluir en la direccion informacion que se usa
+para especificarle al receptor parametros para efectuar una
+busqueda
+se separa la URL de los parametros utilizando ?
+cada parmetro tendra key=value & key2=value2
+cada parametro se separa con &
+
+RESTFUL
+Cuando se crea y provee un servicio basado y pensado en 
+terminos de recursos y se respetan las convenciones
+de verbo/metodo y codigo de respuesta. Estamos frente a 
+un diseño arquitectural de tipo REST
+Si ademas transferimos javascript o xml es conocido como
+AJAX
+
+REQUESTS EN EL BROWSER
+FETCH
+Podemos hacer un request utilizando Fetch API
+Nos provee una promesa, que se resuelve al terminar el request
+Esta respuesta es una promise que nos permite acceder a la 
+respuesta
+
+CORS
+Es un bloqueo de seguridad efectuado por el navegador
+Se soluciona configurando al otro servidor para que admita
+cors respondiendo el siguiente header ante un OPTIONS preflight
+  */
