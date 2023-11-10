@@ -1,4 +1,5 @@
 /**
+ * ATAJO DE TECLADO PARA ESQUELETO rafce
  * CLASE 1
  REACT
  1° PREMISA: Optimizar los movimientos
@@ -298,4 +299,39 @@ CORS
 Es un bloqueo de seguridad efectuado por el navegador
 Se soluciona configurando al otro servidor para que admita
 cors respondiendo el siguiente header ante un OPTIONS preflight
-  */
+ 
+*/
+
+/***
+ CLASE 8
+ ROUTING Y NAVIGATION
+ REACT ROUTER
+1-  instalacion 
+    npm install react-router-dom
+2- importar
+    import { BrowserRouter, Router, Route} from "react-router-dom"
+3-
+<BrowserRouter>
+         <Navbar />
+      <Routes>
+        <Route exact path="/" element = {<ItemListContainer/>} />
+        <Route exact path="/clickCounter" element = {<ClickCounter/>} />
+        <Route exact path="/itemCount" element = { <ItemCount stock = "10"/>} />
+        <Route exact path="/itemDetailContainer" element = {<ItemDetailContainer/>} />
+        <Route exact path="/" element = {<PokemonList/>} />
+      </Routes>
+    </BrowserRouter>
+
+NAVEGAR UNA RUTA
+se puede importar un link perteneciente al react-router-dom
+en cualquier componente del sub-arbol del BrowserRouter
+Usarlo para que al clickear el BrowserRouter
+renderice ese Route que habiamos declarado dentro del switch
+ import {link} from "react-router-dom"
+ Link to= {"/cart"}
+
+NAVEGAR UNA RUTA CON PARAMETROS
+
+
+
+    */
