@@ -331,7 +331,38 @@ renderice ese Route que habiamos declarado dentro del switch
  Link to= {"/cart"}
 
 NAVEGAR UNA RUTA CON PARAMETROS
-
-
-
+useParams
     */
+
+/***
+CLASE 9 EVENTOS
+    Es un evento programatico que puede ser provocado
+de manera automatica o ser el resultado de una interaccion
+del usuario con la UI
+- Tipos de eventos:
+Eventos automaticos: Mucho tiempo sin ver netflix sale un
+alert
+Eventos manuales: Interacciones del usuario que producen
+algun tipo de respuesta o efecto secundario
+
+-DOM event:
+Se dividen en dos categorias:
+    -Dispositivp/accion: mouse, input, keyboard
+    -Custom events: Definir eventos propios que disparen
+        la info que nosotros queremos
+        onClick
+
+-Event Listener
+Es un patron de diseño que sirve para escuchar cuando algo
+ocurre en algun elemento, libreria o API y poder realizar
+una accion en consecuencia
+
+ABSTRACCION
+la abstracción en React se manifiesta a través de la 
+creación de componentes reutilizables, el uso de hooks 
+para manejar el estado y los efectos secundarios, y la 
+encapsulación de la lógica de la interfaz de usuario. 
+Estos conceptos ayudan a reducir la complejidad y a mejorar 
+la mantenibilidad de las aplicaciones React.
+ 
+ */
