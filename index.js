@@ -366,3 +366,19 @@ Estos conceptos ayudan a reducir la complejidad y a mejorar
 la mantenibilidad de las aplicaciones React.
  
  */
+
+/**
+ CLASE 10 CONTEXT
+ Dado que React funciona con un flujo de datos unidireccional
+ la unica manera de transmitir datos es via props
+ context es una caracteristica que facilita la transmision de 
+ datos a traves de la jerarquia de componentes sin tener que
+ pasar explicitamente las props a cada nivel.
+ Evita la prop drilling o la necesidad de pasar datos a 
+ traves de multiples niveles de componentes que no necesitan 
+ esos datos directamente
+
+ El contexto consta de dos partes: 
+ El provider(provedor)
+ El consumer (consumidor)
+ */
