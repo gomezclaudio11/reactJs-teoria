@@ -382,3 +382,59 @@ la mantenibilidad de las aplicaciones React.
  El provider(provedor)
  El consumer (consumidor)
  */
+
+ /**
+    CLASE 11 RENDERIZADO CONDICIONAL
+    Sirve para aparecer y desaparecer nodos del render
+    Estos eventos provocan dismounting y todos los efectos
+    que ellos conlleva
+    Se llamara al efecto de desmontaje y podremos detectarlo
+
+   El renderizado condicional en React se refiere a la 
+   capacidad de renderizar diferentes elementos o 
+   componentes en función de una condición. 
+
+   import React from 'react';
+
+const Loader = ({ loading }) => {
+  return (
+    <div>
+      {loading ? (
+        <p>Cargando...</p>
+      ) : (
+        null
+      )}
+    </div>
+  );
+};
+
+export default Loader;
+
+import React, { useState, useEffect } from 'react';
+import Loader from './Loader';
+
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulando una operación asincrónica, como una solicitud a una API
+    const fetchData = async () => {
+      // Simulación de retardo
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setIsLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Mi Aplicación</h1>
+      <Loader loading={isLoading} />
+     
+      </div>
+      );
+    };
+    
+    export default App;
+  */
